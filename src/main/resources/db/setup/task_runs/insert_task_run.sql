@@ -1,0 +1,1 @@
+INSERT INTO task_runs (task_rule_id, created_at, updated_at, count, published_count) VALUES (10, NOW(), NOW(), 1, 2);

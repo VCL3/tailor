@@ -1,0 +1,48 @@
+# http://www.dropwizard.io/1.0.3/docs/manual/configuration.html#man-configuration
+server:
+  type: default
+  maxThreads: 50
+  minThreads: 8
+  applicationConnectors:
+  - type: http
+    port: 9000
+  adminConnectors:
+  - type: http
+    port: 9001
+
+logging:
+  level: INFO
+  loggers:
+    com.intrence.backend: DEBUG
+
+postgres:
+  host: localhost
+  database: cdg_pg
+  adminPort: 15432
+  sessionPort: 6432
+  transactionPort: 5432
+  properties:
+    loginTimeout: 10
+    socketTimeout: 5
+  app:
+    user: cdg_dev
+    pass: cdg_dev
+  dba:
+    user: cdg_dev
+    pass: cdg_dev
+
+elasticSearch:
+  clusterName: elasticsearch_wliu
+  port: 9300
+  nodesToConnect: localhost
+
+redis:
+  endpoint: localhost:6379
+  timeout: 2000
+
+webFetcher:
+  useProxyService: false
+  pxProxyHost: hawk-pr.snc1
+  pxProxyPort: 5555
+  pxProxyUser: gsanka
+  pxProxyPassword: 8f3KQ4TM
